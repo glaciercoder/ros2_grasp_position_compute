@@ -1,0 +1,36 @@
+[0.439s] Invoking command in '/home/wbc/Projects/ros2_grasp_position_compute/src/ros2_grasp_position_compute': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/prefix_override:/home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros2_grasp_position_compute build --build-base /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build install --record /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/install.log --single-version-externally-managed install_data
+[0.538s] running egg_info
+[0.538s] creating ../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info
+[0.544s] writing ../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/PKG-INFO
+[0.544s] writing dependency_links to ../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/dependency_links.txt
+[0.544s] writing requirements to ../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/requires.txt
+[0.544s] writing top-level names to ../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/top_level.txt
+[0.544s] writing manifest file '../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/SOURCES.txt'
+[0.556s] reading manifest file '../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/SOURCES.txt'
+[0.556s] adding license file 'LICENSE'
+[0.556s] writing manifest file '../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info/SOURCES.txt'
+[0.557s] running build
+[0.557s] running build_py
+[0.557s] creating /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build
+[0.557s] creating /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build/lib
+[0.557s] creating /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build/lib/ros2_grasp_position_compute
+[0.557s] copying ros2_grasp_position_compute/__init__.py -> /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build/lib/ros2_grasp_position_compute
+[0.557s] copying ros2_grasp_position_compute/compute_position_server.py -> /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build/lib/ros2_grasp_position_compute
+[0.557s] running install
+[0.559s] running install_lib
+[0.565s] creating /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages/ros2_grasp_position_compute
+[0.565s] copying /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build/lib/ros2_grasp_position_compute/__init__.py -> /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages/ros2_grasp_position_compute
+[0.565s] copying /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build/lib/ros2_grasp_position_compute/compute_position_server.py -> /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages/ros2_grasp_position_compute
+[0.565s] byte-compiling /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages/ros2_grasp_position_compute/__init__.py to __init__.cpython-310.pyc
+[0.565s] byte-compiling /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages/ros2_grasp_position_compute/compute_position_server.py to compute_position_server.cpython-310.pyc
+[0.566s] running install_data
+[0.566s] creating /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/share/ament_index
+[0.566s] creating /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/share/ament_index/resource_index
+[0.566s] creating /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/share/ament_index/resource_index/packages
+[0.566s] copying resource/ros2_grasp_position_compute -> /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/share/ament_index/resource_index/packages
+[0.566s] copying package.xml -> /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/share/ros2_grasp_position_compute
+[0.566s] running install_egg_info
+[0.573s] Copying ../../build/ros2_grasp_position_compute/ros2_grasp_position_compute.egg-info to /home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages/ros2_grasp_position_compute-0.0.0-py3.10.egg-info
+[0.573s] running install_scripts
+[0.640s] writing list of installed files to '/home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/install.log'
+[0.651s] Invoked command in '/home/wbc/Projects/ros2_grasp_position_compute/src/ros2_grasp_position_compute' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/prefix_override:/home/wbc/Projects/ros2_grasp_position_compute/install/ros2_grasp_position_compute/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/ros2_grasp_position_compute build --build-base /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/build install --record /home/wbc/Projects/ros2_grasp_position_compute/build/ros2_grasp_position_compute/install.log --single-version-externally-managed install_data

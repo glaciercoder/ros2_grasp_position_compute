@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from compute_grasp_interface/srv/ComputeGrasp.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PointStamped.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module compute_grasp_interface {
+  module srv {
+    struct ComputeGrasp_Request {
+      geometry_msgs::msg::PointStamped target;
+    };
+    struct ComputeGrasp_Response {
+      geometry_msgs::msg::PoseStamped target;
+    };
+  };
+};

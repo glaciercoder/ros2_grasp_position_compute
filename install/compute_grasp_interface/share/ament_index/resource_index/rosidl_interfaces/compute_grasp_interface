@@ -1,0 +1,4 @@
+srv/ComputeGrasp.idl
+srv/ComputeGrasp.srv
+srv/ComputeGrasp_Request.msg
+srv/ComputeGrasp_Response.msg
