@@ -19,13 +19,14 @@ from nav_msgs.msg import Odometry, OccupancyGrid
 from geometry_msgs.msg import Quaternion
 from tf_transformations import quaternion_from_euler
 from collections import deque
-
+from compute_grasp_interface.srv import ComputeGrasp
 
 class Compute_grasp_position_server(Node):
     def __init__(self):
         super().__init__('grasp_position_server')
         # Callback grouop
         sub_cb = MutuallyExclusiveCallbackGroup()
+        srv_cb = MutuallyExclusiveCallbackGroup()
 
         # Parameters
         self.declare_parameter('self.search_scale', '50')
@@ -36,6 +37,7 @@ class Compute_grasp_position_server(Node):
         # Subs, server
         self.map_sub = self.create_subscription(OccupancyGrid, '/map', self.mapCallback, callback_group=sub_cb)
         self.odom_sub = self.create_subscription(Odometry, '/odometry/filtered', self.odomCallback, callback_group=sub_cb)
+        self.compute_grasp_pos = self.create_service(ComputeGrasp, 'compute_grasp_pos', self.compute_grasp_callback, callback_group=srv_cb)
 
 
         # Data
