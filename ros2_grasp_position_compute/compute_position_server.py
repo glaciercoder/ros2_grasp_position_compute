@@ -7,7 +7,7 @@ from rclpy.action import ActionClient
 from rclpy.node import Node
 
 from nav2_msgs.action import NavigateToPose
-from geometry_msgs.msg import PoseStamped, Pose
+from geometry_msgs.msg import PoseStamped, Pose, PointStamped
 from geometry_msgs.msg import Pose
 from tf2_ros.transform_listener import TransformListener
 from tf2_ros.buffer import Buffer
@@ -42,8 +42,14 @@ class Compute_grasp_position_server(Node):
         self.map = None
         self.current_pos = None
 
+    def compute_grasp_callback(self, request, response):
+        if self.map:
+            response.goal_pose = self.calculate_goal_pose_on_map(request.target)
+ 
+        return response
 
-    def calculate_goal_pose_on_map(self, center_pose: PoseStamped, map_msg: OccupancyGrid):
+
+    def calculate_goal_pose_on_map(self, center_pose: PointStamped, map_msg: OccupancyGrid):
         self.current_x = self.current_pos.position.x
         self.current_y = self.current_pos.position.y
         
@@ -57,11 +63,11 @@ class Compute_grasp_position_server(Node):
         map_origin_x = map_msg.info.origin.position.x
         map_origin_y = map_msg.info.origin.position.y
 
-        map_coordinate_x = int((center_pose.pose.position.x - map_origin_x) / map_resolution)
-        map_coordinate_y = int((center_pose.pose.position.y - map_origin_y) / map_resolution)
+        map_coordinate_x = int((center_pose.point.x - map_origin_x) / map_resolution)
+        map_coordinate_y = int((center_pose.point.y - map_origin_y) / map_resolution)
 
-        target_x = center_pose.pose.position.x
-        target_y = center_pose.pose.position.y
+        target_x = center_pose.point.x
+        target_y = center_pose.point.y
         select_x, select_y = target_x, target_y
 
         s_best = float('inf')
@@ -147,3 +153,18 @@ class Compute_grasp_position_server(Node):
 
     def odomCallback(self, msg):
         self.current_pos = msg.pose.pose
+
+def main():
+    rclpy.init()
+
+    compute_grasp_server = Compute_grasp_position_server()
+
+    executor = MultiThreadedExecutor()
+    executor.add_node(compute_grasp_server)
+    executor.spin()
+
+    
+
+
+if __name__ == '__main__':
+    main()
